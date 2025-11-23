@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account Creation</title>
+</head>
+<body>
+  <h1>Create Account & Preferences</h1>
+  <p></p>
+
+  <form action="#" method="post" enctype="multipart/form-data" autocomplete="on">
+    <input type="hidden" name="csrf_token" value="REPLACE_WITH_TOKEN" />
+
+    <!-- ACCOUNT INFORMATION -->
+    <fieldset>
+      <legend>1) Account Information</legend>
+      <label for="email">Email *</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+      <label for="password">Password *</label>
+      <input id="password" name="password" type="password" required minlength="8" maxlength="64" />
+
+      <label for="username">Username *</label>
+      <input id="username" name="username" type="text" required minlength="3" maxlength="20" />
+
+      <label for="website">Personal Website</label>
+      <input id="website" name="website" type="url" placeholder="https://your-site.com" />
+    </fieldset>
+
+    <!-- PERSONAL DETAILS -->
+    <fieldset>
+      <legend>2) Personal Details</legend>
+      <label for="firstName">First Name *</label>
+      <input id="firstName" name="first_name" type="text" required />
+
+      <label for="lastName">Last Name *</label>
+      <input id="lastName" name="last_name" type="text" required />
+
+      <label for="phone">Mobile Number</label>
+      <input id="phone" name="phone" type="tel" placeholder="0917 123 4567" />
+
+      <label for="birthDate">Birth Date</label>
+      <input id="birthDate" name="birth_date" type="date" />
+
+      <label for="bestTime">Best Time to Contact</label>
+      <input id="bestTime" name="best_time" type="time" />
+
+      <label for="country">Country/Region *</label>
+      <input id="country" name="country" list="countryList" required placeholder="Start typing..." />
+      <datalist id="countryList">
+        <option value="Philippines"></option>
+        <option value="Singapore"></option>
+        <option value="United States"></option>
+        <option value="Australia"></option>
+        <option value="United Kingdom"></option>
+      </datalist>
+
+      <label for="city">City</label>
+      <input id="city" name="city" type="text" />
+
+      <label for="bio">Short Bio</label>
+      <textarea id="bio" name="bio" maxlength="280" placeholder="Tell us something about you (max 280 characters)"></textarea>
+    </fieldset>
+
+    <!-- PREFERENCES -->
+    <fieldset>
+      <legend>3) Preferences</legend>
+      <label for="themeColor">Theme Style</label>
+      <label><input id="themeColor" name="theme_color" type="radio">Theme 1</label>
+        <label><input id="themeColor" name="theme_color" type="radio">Theme 2</label>
+        <label><input id="themeColor" name="theme_color" type="radio">Theme 3</label>
+    </fieldset>
+    <br>
+    <button type="submit">Create Account</button>
